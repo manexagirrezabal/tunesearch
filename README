@@ -1,0 +1,21 @@
+manex@u014733:~/Dropbox/tuneSearch/search$ ls -l /usr/lib/cgi-bin/
+lrwxrwxrwx 1 manex manex 47 ots 20 10:00 search.py -> /home/manex/Dropbox/tuneSearch/search/search.py
+
+manex@u014733:~/Dropbox/tuneSearch/search$ ls -l /var/www/
+lrwxrwxrwx 1 manex manex    38 ots 19 14:49 tuneSearch -> /home/manex/Dropbox/tuneSearch/interf/
+
+
+
+Manex's MacBook:
+ln -s /Users/manex/tunesearch/search/search.py /var/www/search.py
+ln -s /Users/manex/tunesearch/interf /var/www/tuneSearch
+Set bilatuNotak() function in manex.js with the correct CGI_LIB directory
+
+export TUNESEARCHHOME=/Users/manex/tunesearch
+export CGI_LIBHOME=/var/www
+export WEBSERVER=/var/www
+
+ln -s $TUNESEARCHHOME/search/search.py $CGI_LIBHOME/search.py
+ln -s $TUNESEARCHHOME/interf $WEBSERVER/tuneSearch
+
+echo "Set bilatuNotak() function in manex.js with the correct CGI_LIB directory"
